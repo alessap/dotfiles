@@ -1,0 +1,6 @@
+# Antergos:
+
+# Add the following in /etc/modprobe.d/psmouse_serio2_setup.conf to avoid scrolling being disabled after sleep
+options psmouse synaptics_intertouch=0
+
+
