@@ -1,0 +1,3 @@
+00:02.0 VGA compatible controller: Intel Corporation Haswell-ULT Integrated Graphics Controller (rev 0b)
+	Subsystem: Lenovo Haswell-ULT Integrated Graphics Controller
+	Kernel driver in use: i915

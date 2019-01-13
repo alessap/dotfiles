@@ -1,0 +1,102 @@
+#
+# ~/.bashrc.aliases
+#
+
+alias ls='ls --color=auto'
+
+alias pacrepo='sudo reflector -l 20 -f 10 --save /etc/pacman.d/mirrorlist'
+#alias pacman='sudo pacman'
+alias journalctl='sudo journalctl'
+alias pacu='sudo pacman -Syu --noconfirm'
+#alias auru='yaourt -Syua --noconfirm'
+alias systemctl='sudo systemctl'
+alias se='ls /usr/bin | grep'
+
+export QT_STYLE_OVERRIDE=gtk
+export QT_SELECT=qt5
+
+if [[ $LANG = '' ]]; then
+	export LANG=en_US.UTF-8
+fi
+
+# from MANJARO
+alias vimrc="vim ~/.vimrc"
+
+alias bashrc="vim ~/.bashrc && source ~/.bashrc"
+alias sbash="source ~/.bashrc"
+
+alias ls="ls --color=auto"
+alias ll="ls -lrtha"
+
+alias mkdir='mkdir -pv'
+
+alias x='exit'
+alias c='clear'
+alias h='history'
+alias hg='history | grep'
+alias j='jobs -l'
+
+alias ports='netstat -tulanp'
+
+alias vi=vim
+alias svi='sudo vi'
+alias vis='vim "+set si"'
+alias edit='vim'
+
+## pass options to free ##
+alias meminfo='free -h -l -t'
+ 
+## get top process eating memory
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+ 
+## get top process eating cpu ##
+alias pscpu='ps auxf | sort -nr -k 3'
+alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
+ 
+## Get server cpu info ##
+alias cpuinfo='lscpu'
+
+## set some other defaults ##
+alias df='df -H'
+alias du='du -ch'
+
+# safe rm in terminal
+# self explanatory
+alias trash-empty="gio trash --empty"
+# for moving files to trash
+alias rm="gio trash -f"
+# for viewing contents of the trash
+alias trash-list="gio list -h trash://"
+
+# virtualenv python
+alias actenv="source venv/bin/activate"
+
+# git
+alias gst="git status"
+alias gcm="git checkout master"
+
+#
+# # ex - archive extractor
+# # usage: ex <file>
+ex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1     ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
