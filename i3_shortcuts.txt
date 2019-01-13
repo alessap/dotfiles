@@ -1,0 +1,7 @@
+$mod + Shift + r --> reload i3 config files (tested with i3status)
+$mod + NUMBER --> move to another workspace
+$mod + d --> run a program
+$mod + ENTER --> open a terminal
+
+
+
