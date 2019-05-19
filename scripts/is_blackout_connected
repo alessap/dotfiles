@@ -1,0 +1,10 @@
+# /usr/bin/bash
+
+value=$( bluetoothctl info 04:52:C7:FF:8D:B5 | grep "Connected: yes" | wc -l)
+if [ $value -eq 1 ]
+then
+  echo "Yes"
+else
+  echo "No"
+fi
+
