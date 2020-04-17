@@ -70,7 +70,7 @@ alias rm="gio trash -f"
 alias trash-list="gio list -h trash://"
 
 # virtualenv python
-alias actenv="source venv/bin/activate"
+alias actenv="source .venv/bin/activate"
 
 # git
 alias gst="git status"
