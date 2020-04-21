@@ -84,7 +84,7 @@ function _update_ps1() {
 }
 
 # alias powerline-shell=/home/alessap/anaconda3/bin/powerline-shell
-alias powerline-shell=/home/alessap/miniconda3/bin/powerline-shell
+# alias powerline-shell=/home/alessap/miniconda3/bin/powerline-shell
 
 if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
@@ -114,7 +114,9 @@ export PATH=~/pebble-dev/pebble-sdk-4.5-linux64/bin:$PATH
 
 export PATH=$PATH:/home/alessap/bin
 
-source '/home/alessap/lib/azure-cli/az.completion'
+if [ -f '/home/alessap/lib/azure-cli/az.completion' ]; then
+    source '/home/alessap/lib/azure-cli/az.completion'
+fi
 
 export PATH=$PATH:/home/alessap/Software/azure-functions-cli
 export PATH=$PATH:/home/alessap/Software/StorageExplorer
@@ -124,4 +126,6 @@ export PATH=$PATH:/var/lib/snapd/snap/bin
 
 alias naturalscrolling="xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled' 1"
 
+alias lightu="xbacklight -inc 5"
+alias lightd="xbacklight -dec 5"
 
