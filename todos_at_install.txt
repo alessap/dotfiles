@@ -39,3 +39,11 @@ sudo systemctl start trackpoint_parameters.path
 # Watch Netflix
 ## install widevine
 pacaur -S chromium-widevine
+
+
+# grub theme
+https://github.com/fghibellini/arch-silence
+## copy theme folder into "/boot/grub/themes/arch-silence/theme.txt"
+## 1. open the file "/etc/default/grub"
+## 2. set the GRUB_THEME line to GRUB_THEME="/boot/grub/themes/arch-silence/theme.txt"
+## 3. run `sudo grub-mkconfig -o /boot/grub/grub.cfg` to update the grub config file.
