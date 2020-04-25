@@ -10,3 +10,6 @@ sudo pacman -R xscreensaver
 sudo pacman -S neofetch
 pacaur -S xfce4-notifyd
 pacaur -S xfce4-wavelan-plugin
+xfce4-screenshooter
+pacaur -S i3ipc-glib-git
+sudo pacman -S grub-customizer
