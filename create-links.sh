@@ -7,7 +7,11 @@ mv ~/.bashrc ~/.bashrc.bak
 mv ~/.bash_profile ~/.bash_profile.bak
 
 ln -sf ~/dotfiles/.bashrc             ~/.bashrc
-ln -sf ~/dotfiles/vimrc              ~/.vimrc
+ln -sf ~/dotfiles/.bashrc.aliases     ~/.bashrc.aliases
+ln -sf ~/dotfiles/vimrc               ~/.vimrc
+ln -sf ~/dotfiles/xserverrc           ~/.xserverrc
+ln -sf ~/dotfiles/xinitrc             ~/.xinitrc
+
 # ln -sf ~/dotfiles/bashprofile        ~/.profile
 # ln -sf ~/dotfiles/inputrc            ~/.inputrc
 # ln -sf ~/dotfiles/ideavimrc          ~/.ideavimrc
@@ -49,7 +53,7 @@ ln -sf /home/alessap/dotfiles/.config/i3status          /home/alessap/.config/i3
 
 # linux only
 if [ "$unamestr" == "Linux" ] && [ -f /etc/pacman.conf ]; then
-  ln -sf ~/dotfiles/X11/xinitrc      ~/.xinitrc
+#   ln -sf ~/dotfiles/X11/xinitrc      ~/.xinitrc
 #   ln -sf ~/dotfiles/X11/Xmodemap     ~/.Xmodemap
 #   ln -sf ~/dotfiles/X11/Xresources   ~/.Xresources
 #   ln -sf ~/dotfiles/X11/yaourtc      ~/.yaourtc
