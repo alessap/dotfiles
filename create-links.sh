@@ -36,13 +36,15 @@ mkdir -p .config
 ln -sf ~/dotfiles/.i3  ~/.i3
 ln -sf ~/dotfiles/config/i3  ~/.config/i3
 ln -sf ~/dotfiles/config/i3status  ~/.config/i3status
-ln -sf /home/alessap/dotfiles/.config/powerline-shell   /home/alessap/.config/powerline-shell
-ln -sf /home/alessap/dotfiles/.config/py3status         /home/alessap/.config/py3status
+ln -sf /home/alessap/dotfiles/.config/powerline-shell                      /home/alessap/.config/powerline-shell
+ln -sf /home/alessap/dotfiles/.config/py3status                            /home/alessap/.config/py3status
 
-ln -sf /home/alessap/dotfiles/.config/py3status         /home/alessap/.config/py3status
-ln -sf /home/alessap/dotfiles/.config/powerline-shell   /home/alessap/.config/powerline-shell
-ln -sf /home/alessap/dotfiles/.config/i3                /home/alessap/.config/i3
-ln -sf /home/alessap/dotfiles/.config/i3status          /home/alessap/.config/i3status
+ln -sf /home/alessap/dotfiles/.config/py3status                            /home/alessap/.config/py3status
+ln -sf /home/alessap/dotfiles/.config/powerline-shell                      /home/alessap/.config/powerline-shell
+ln -sf /home/alessap/dotfiles/.config/i3                                   /home/alessap/.config/i3
+ln -sf /home/alessap/dotfiles/.config/i3status                             /home/alessap/.config/i3status
+ln -sf /home/alessap/dotfiles/.config/i3status                             /home/alessap/.config/i3status
+ln -sf /home/alessap/dotfiles/.config/libinput-gestures.conf               /home/alessap/.config/libinput-gestures.conf
 
 
 
