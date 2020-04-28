@@ -76,6 +76,9 @@ alias actenv="source .venv/bin/activate"
 alias gst="git status"
 alias gcm="git checkout master"
 
+# cups and sane
+alias scan="scanimage --device 'pixma:04A91751_893623' --progress "  #  --format=png --output-file test.png
+alias print=""
 #
 # # ex - archive extractor
 # # usage: ex <file>
