@@ -47,3 +47,13 @@ https://github.com/fghibellini/arch-silence
 ## 1. open the file "/etc/default/grub"
 ## 2. set the GRUB_THEME line to GRUB_THEME="/boot/grub/themes/arch-silence/theme.txt"
 ## 3. run `sudo grub-mkconfig -o /boot/grub/grub.cfg` to update the grub config file.
+
+# fingerprint x260
+## https://wiki.archlinux.org/index.php/Fprint
+## sudo vim /usr/share/polkit-1/rules.d/50-net.reactivated.fprint.device.enroll.rules
+polkit.addRule(function (action, subject) {
+  if (action.id == "net.reactivated.fprint.device.enroll") {
+    return subject.user == "root" ? polkit.Result.YES : polkit.result.NO
+  }
+})
+
