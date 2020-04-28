@@ -13,3 +13,14 @@ pacaur -S xfce4-wavelan-plugin
 xfce4-screenshooter
 pacaur -S i3ipc-glib-git
 sudo pacman -S grub-customizer
+pacaur autotiling
+sudo pacman -S fprintd libfprint
+sudo pacman -S xfce4-clipman-plugin
+sudo pacman -S lightdm lightdm-gtk-greeter
+sudo pacman -S acpid
+sudo pacman -S v4l-utils xawtv vlc
+sudo pacman -S lightdm-gtk-greeter-settings 
+sudo pacman -S cups-pdf cups
+sudo pacman -S usbutils pciutils gtk3-print-backends cups cups-pdf
+sudo pacman -S sane
+pacaur -S visual-studio-code-bin
