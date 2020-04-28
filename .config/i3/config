@@ -229,10 +229,18 @@ bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle
 #######                                                           #######
 #########################################################################
 
+exec_always --no-startup-id autotiling
+exec_always --no-startup-id setxkbmap dk
+
+exec --no-startup-id caffeine
+exec --no-startup-id blueman-applet
+exec --no-startup-id start-pulseaudio-x11
+
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id "compton -cC"
-exec --no-startup-id "nm-applet "
+# exec --no-startup-id "nm-applet "
 exec --no-startup-id "nitrogen --restore"
+# exec --no-startup-id "nitrogen --restore"
 # exec --no-startup-id "sleep 2s && kalu"
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 # exec --no-startup-id "nitrogen /home/alessap/pictures/wallpaper_01.png"
