@@ -49,7 +49,8 @@ backlight {
 
 battery all {
     # format = "%percentage %status %remaining (%emptytime %consumption)"
-    format = "%status%percentage %remaining (%emptytime %consumption)"
+    # format = "%status%percentage %remaining (%emptytime %consumption)"
+    format = "BATT %percentage %remaining (%emptytime %consumption)"
     format_down = "No battery"
     last_full_capacity = true 
     # last_full_capacity = false
@@ -75,23 +76,28 @@ run_watch VPN {
 # "%Y-%m-%d %H:%M:%S"
 # " %d/%m/%Y   %H:%M"
 tztime local {
-    format = "%Y-%m-%d %H:%M:%S"
+    format = "%Y-%m-%d %H:%M:%S"
+    # format = "%Y-%m-%d %H:%M:%S"
 }
 
 load {
-    format = "%1min"
+    format = "LOAD %1min"
+    # format = "%1min"
 }
 
 cpu_usage {
-    format = "%usage"
+    format = "CPU %usage"
+    # format = "%usage"
 }
 
 cpu_temperature 0 {
-    format = "%degrees°C"
+    format = "TEMP %degrees°C"
+    # format = "%degrees°C"
 }
 
 disk "/" {
-    format = "%avail"
+    format = "DISK %avail"
+    # format = "%avail"
     prefix_type	= custom
     low_threshold = 20
     threshold_type = percentage_avail
@@ -101,7 +107,8 @@ disk "/" {
 volume master {
     # format = "%volume"
     format = "♬%volume"
-    format_muted = " "
+    format_muted = "MUTED"
+    # format_muted = " "
     device = "default"
     mixer = "Master"
     mixer_idx = 0
