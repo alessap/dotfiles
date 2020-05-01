@@ -43,7 +43,10 @@ fi
 setxkbmap -layout dk
 
 # xinput set-prop "SynPS/2 Synaptics TouchPad" "Tapping Enabled" 1
+# natural scrolling
 xinput set-prop 11 303 1
+# enable tapping
+xinput set-prop 11 306 1
 
 exec i3
 

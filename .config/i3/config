@@ -251,6 +251,15 @@ exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 
 # set natural scrolling
 exec "xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled' 1"
+# xinput set-prop "SynPS/2 Synaptics TouchPad" "Tapping Enabled" 1
+#
+# set dk layout
+exec "setxkbmap -layout dk"
+# natural scrolling
+exec "xinput set-prop 11 303 1"
+# enable tapping
+exec "xinput set-prop 11 306 1"
+
 
 #########################################################################
 #######                                                           #######
@@ -296,7 +305,8 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym --release XF86PowerOff mode "$mode_system"
+# bindsym --release XF86PowerOff mode "$mode_system"
+bindsym $mod+z mode "$mode_system"
 
 # activate bluetooth and connect Blackout Bose QC 35 II
 set $mode_bluetooth (a)ctivate | (d)eactivate bluetooth -- (c)onnect | di(s)connect Blackout

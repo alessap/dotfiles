@@ -21,6 +21,7 @@ general {
 
 # order += "blackout_click_v2"
 # order += "blackout_click"
+order += "wifi"
 order += "blackout"
 order += "backlight"
 order += "volume master"
