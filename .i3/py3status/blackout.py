@@ -8,11 +8,11 @@ class Py3status:
 
     def __init__(self):
         headphones_icon = "Blackout" 
-        self.format_connected =  headphones_icon + " ON"
-        self.format_disconnected = headphones_icon + " OFF"
+        # self.format_connected =  headphones_icon + " ON"
+        # self.format_disconnected = headphones_icon + " OFF"
         # self.format_connected =  "🎧 ✔"
-        # self.format_connected =  headphones_icon + " ✔"
-        # self.format_disconnected = headphones_icon + " ✘"
+        self.format_connected =  headphones_icon + " ✔"
+        self.format_disconnected = headphones_icon + " ✘"
         self.format_default = "N/A"
         self.format_output = headphones_icon + " "
         # self.format_output = headphones_icon + " ✘"
