@@ -320,8 +320,22 @@ mode "$mode_bluetooth" {
 }
 bindsym $mod+b mode "$mode_bluetooth"
 
+exec "powerline-lemonbar --height 16 -- -b -f 'DejaVu Sans Mono-11' -f 'PowerlineSymbols-12' -f 'FontAwesome-11' "
 # i3status bar
 bar {
+    #  colors {
+    #      background $bg-color
+    #      separator #757575
+    #      #                  border             background         text
+    #      focused_workspace  $bg-color          $bg-color          $text-color
+    #      inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+    #      urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+    #  }
+    #  #  i3bar_command i3bar -t
+    #  height 24
+    #  position top
+    #  status_command py3status -c ~/.config/py3status/config
+    #  # i3bar_command py3status -c ~/.config/py3status/config
     colors {
         background $bg-color
         separator #757575
@@ -330,12 +344,14 @@ bar {
         inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
         urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
     }
-    #  i3bar_command i3bar -t
-    height 20
+    height 24
     position top
-    status_command py3status -c ~/.config/py3status/config
-    # i3bar_command py3status -c ~/.config/py3status/config
+    separator_symbol "⁞"
+    status_command i3status
+    #status_command i3status ~/.config/i3status/bright.sh
 }
+
+
 # 
 # # colors {
 # #          background #00000099

@@ -45,6 +45,7 @@ alias blackout_on="bluetoothctl connect 04:52:C7:FF:8D:B5"
 alias blackout_off="bluetoothctl disconnect 04:52:C7:FF:8D:B5"
 
 alias i3conf="vim ~/.config/i3/config"
+alias i3statusconf="vim ~/.config/i3status/config"
 alias py3conf="vim ~/.config/py3status/config"
 
 export PATH=/home/alessap/dotfiles/scripts:$PATH
@@ -128,4 +129,17 @@ alias naturalscrolling="xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput N
 
 alias lightu="xbacklight -inc 5"
 alias lightd="xbacklight -dec 5"
+
+if [ -n "$GTK_MODULES" ]; then
+    GTK_MODULES="${GTK_MODULES}:appmenu-gtk-module"
+else
+    GTK_MODULES="appmenu-gtk-module"
+fi
+
+if [ -z "$UBUNTU_MENUPROXY" ]; then
+    UBUNTU_MENUPROXY=1
+fi
+
+export GTK_MODULES
+export UBUNTU_MENUPROXY
 

@@ -43,7 +43,7 @@ ln -sf /home/alessap/dotfiles/.config/py3status                            /home
 ln -sf /home/alessap/dotfiles/.config/powerline-shell                      /home/alessap/.config/powerline-shell
 ln -sf /home/alessap/dotfiles/.config/i3                                   /home/alessap/.config/i3
 ln -sf /home/alessap/dotfiles/.config/i3status                             /home/alessap/.config/i3status
-ln -sf /home/alessap/dotfiles/.config/i3status                             /home/alessap/.config/i3status
+ln -sf /home/alessap/dotfiles/.config/powerline                            /home/alessap/.config/powerline
 ln -sf /home/alessap/dotfiles/.config/libinput-gestures.conf               /home/alessap/.config/libinput-gestures.conf
 
 

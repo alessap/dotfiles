@@ -24,3 +24,4 @@ sudo pacman -S cups-pdf cups
 sudo pacman -S usbutils pciutils gtk3-print-backends cups cups-pdf
 sudo pacman -S sane
 pacaur -S visual-studio-code-bin
+pacaur -S noto-fonts-emoji 
