@@ -6,11 +6,13 @@ unamestr=`uname`
 mv ~/.bashrc ~/.bashrc.bak
 mv ~/.bash_profile ~/.bash_profile.bak
 
-ln -sf ~/dotfiles/.bashrc             ~/.bashrc
-ln -sf ~/dotfiles/.bashrc.aliases     ~/.bashrc.aliases
-ln -sf ~/dotfiles/vimrc               ~/.vimrc
-ln -sf ~/dotfiles/xserverrc           ~/.xserverrc
-ln -sf ~/dotfiles/xinitrc             ~/.xinitrc
+ln -sf ~/dotfiles/.bashrc                ~/.bashrc
+ln -sf ~/dotfiles/.bashrc.aliases        ~/.bashrc.aliases
+ln -sf ~/dotfiles/vimrc                  ~/.vimrc
+ln -sf ~/dotfiles/xserverrc              ~/.xserverrc
+ln -sf ~/dotfiles/xinitrc                ~/.xinitrc
+ln -sf ~/dotfiles/dunstrc                ~/.dunstrc
+ln -sf ~/dotfiles/set_pointer_props.py   ~/.set_pointer_props
 
 # ln -sf ~/dotfiles/bashprofile        ~/.profile
 # ln -sf ~/dotfiles/inputrc            ~/.inputrc

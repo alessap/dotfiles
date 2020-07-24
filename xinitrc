@@ -48,7 +48,7 @@ xinput set-prop 11 303 1
 # enable tapping
 xinput set-prop 11 306 1
 
-exec i3
+exec dunst & i3
 
 # # i3 default
 # session=${1:-i3}

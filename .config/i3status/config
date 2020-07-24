@@ -17,6 +17,7 @@ general {
 }
 
 order += "wireless wlp4s0"
+# order += "backlight"
 # order += "brightness"
 # order += "bright"
 order += "volume master"
@@ -47,6 +48,10 @@ wireless wlp4s0 {
 #    format_down = ""
 #}
 
+#backlight {
+#        format = "{level}%"
+#        cache_timeout = 30
+#}
 # bright {
 #     format = "%xbacklight"
 # }

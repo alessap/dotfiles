@@ -38,6 +38,7 @@ floating_modifier $mod
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Kalu"] floating enable
 for_window [class="Blueman"] floating enable
+for_window [class="qemu-pebble"] floating enable
 
 # smart_gaps on
 
@@ -78,10 +79,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+# bindsym $mod+h focus left
+# bindsym $mod+j focus down
+# bindsym $mod+k focus up
+# bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -162,7 +163,8 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+z exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # lock
-bindsym $mod+Shift+x exec i3lock -c000000
+bindsym $mod+l exec /home/alessap/dotfiles/lock_screen.sh
+# bindsym $mod+Shift+x exec i3lock -c000000
 # lock and suspend
 # bindsym $mod+Shift+s exec i3lock -c000000 && systemctl suspend
 # bindsym $mod+Shift+x exec i3lock -c000000
@@ -233,6 +235,9 @@ bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle
 
 exec_always --no-startup-id autotiling
 exec_always --no-startup-id setxkbmap dk
+exec_always --no-startup-id setxkbmap -layout dk
+
+exec_always ~/.set_pointer_props
 
 exec --no-startup-id caffeine
 exec --no-startup-id blueman-applet
@@ -247,17 +252,20 @@ exec --no-startup-id "nitrogen --restore"
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 # exec --no-startup-id "nitrogen /home/alessap/pictures/wallpaper_01.png"
 
+# set scrolling mode for master MX mouse
+# exec_always "xinput set-prop 11 306 0"
 # set natural scrolling
-exec "xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled' 1"
+# exec_aways "xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled' 1"
 # xinput set-prop "SynPS/2 Synaptics TouchPad" "Tapping Enabled" 1
 #
 # set dk layout
-exec "setxkbmap -layout dk"
+exec_always "setxkbmap -layout dk"
 # natural scrolling
-exec "xinput set-prop 11 303 1"
+# exec_always "xinput set-prop 11 303 1"
+exec  --no-startup-id "xinput set-prop 11 311 1"
 # enable tapping
-exec "xinput set-prop 11 306 1"
-
+# exec_always "xinput set-prop 11 306 1"
+exec --no-startup-id "xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled' 1"
 
 #########################################################################
 #######                                                           #######
@@ -294,10 +302,10 @@ bindsym $mod+r mode "resize"
 # set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
 set $mode_system (L)ock log(O)ut (H)ibernate (S)uspend (R)eboot (Shift+S)hutdown
 mode "$mode_system" {
-    bindsym l       exec --no-startup-id i3lock -c000000 
-    bindsym e       exec --no-startup-id kill -9 -1
-    bindsym h       exec --no-startup-id i3lock -c000000 && systemctl hibernate
-    bindsym s       exec --no-startup-id i3lock -c000000 && systemctl suspend
+    bindsym l       exec --no-startup-id /home/alessap/dotfiles/lock_screen.sh 
+    bindsym o       exec --no-startup-id kill -9 -1
+    bindsym h       exec --no-startup-id /home/alessap/dotfiles/lock_screen.sh && systemctl hibernate
+    bindsym s       exec --no-startup-id /home/alessap/dotfiles/lock_screen.sh && systemctl suspend
     bindsym r       exec --no-startup-id systemctl reboot
     bindsym Shift+s exec --no-startup-id systemctl poweroff
 
