@@ -170,6 +170,8 @@ bindsym $mod+l exec /home/alessap/dotfiles/lock_screen.sh
 # bindsym $mod+Shift+x exec i3lock -c000000
 # bindsym $mod+Shift+x exec i3lock --color 475263
 
+# netfix
+bindsym $mod+n exec "/usr/bin/qtws /usr/share/qtws-apps/netflix/netflix.qtws --disable-seccomp-filter-sandbox --register-pepper-plugins=/usr/lib/qt/plugins/ppapi/libwidevinecdmadapter.so; application/x-ppapi-widevine-cdm"
 
 ## Multimedia Keys
 
