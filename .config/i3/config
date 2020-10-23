@@ -207,7 +207,8 @@ bindsym $mod+F7 exec mocp --previous
 bindsym $mod+F8 exec mocp --next
 
 # App shortcuts
-bindsym $mod+w exec "/usr/bin/chromium"
+# bindsym $mod+w exec "/usr/bin/chromium"
+bindsym $mod+w exec "/usr/bin/firefox"
 # bindsym $mod+w exec "/usr/bin/firefox-esr"
 bindsym $mod+s exec "/usr/bin/slack"
 bindsym $mod+e exec "/usr/bin/pcmanfm"
