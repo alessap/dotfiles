@@ -80,16 +80,18 @@ export PATH=/home/alessap/.local/bin:$PATH
 # 
 # fi
 
-function _update_ps1() {
-    PS1=$(powerline-shell $?)
-}
+if [ -f "powerline-shell" ]; then
+    function _update_ps1() {
+        PS1=$(powerline-shell $?)
+    }
+    if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+        PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+    fi
+fi
 
 # alias powerline-shell=/home/alessap/anaconda3/bin/powerline-shell
 # alias powerline-shell=/home/alessap/miniconda3/bin/powerline-shell
 
-if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
 
 alias mount_refind="sudo mount /dev/disk/by-partuuid/e911042d-ee91-4e41-88da-d0fe7759a702 /boot/efi/"
 export PIPENV_VENV_IN_PROJECT=1
