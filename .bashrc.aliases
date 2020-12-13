@@ -28,7 +28,34 @@ alias sbash="source ~/.bashrc"
 alias ls="ls --color=auto"
 alias ll="ls -lrtha"
 
-alias mkdir='mkdir -pv'
+alias mkdir='mkdir -p'
+
+hb()
+{
+  read -p "Are you sure you want to hiberante? [Yy] for yes: " -n 1 -r
+  echo
+    if [[ $REPLY =~ ^[Yy]$ ]]
+  then
+    # do dangerous stuff
+    echo 'hibernating now... '
+    sleep 3
+    sudo systemctl hibernate
+  fi
+}
+
+po()
+{
+  read -p "Are you sure you want to shutdown? [Yy] for yes: " -n 1 -r
+  echo
+    if [[ $REPLY =~ ^[Yy]$ ]]
+  then
+    # do dangerous stuff
+    echo 'shutting down now... '
+    sleep 3
+    poweroff
+  fi
+}
+
 
 alias x='exit'
 alias c='clear'
