@@ -80,7 +80,7 @@ export PATH=/home/alessap/.local/bin:$PATH
 # 
 # fi
 
-if [ -f "powerline-shell" ]; then
+if item="$(type -p "powerline-shell")" || [[ -z $item ]]; then
     function _update_ps1() {
         PS1=$(powerline-shell $?)
     }
