@@ -3,7 +3,8 @@
 #
 
 alias ls='ls --color=auto'
-
+alias cleanpacman='sudo pacman -Scc'
+alias cleanpacaur='pacaur -Scc'
 alias pacrepo='sudo reflector -l 20 -f 10 --save /etc/pacman.d/mirrorlist'
 #alias pacman='sudo pacman'
 alias journalctl='sudo journalctl'
