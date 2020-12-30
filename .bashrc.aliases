@@ -57,6 +57,19 @@ po()
   fi
 }
 
+rb()
+{
+  read -p "Are you sure you want to reboot? [Yy] for yes: " -n 1 -r
+  echo
+    if [[ $REPLY =~ ^[Yy]$ ]]
+  then
+    # do dangerous stuff
+    echo 'rebooting now... '
+    sleep 3
+    reboot
+  fi
+}
+
 
 alias x='exit'
 alias c='clear'
