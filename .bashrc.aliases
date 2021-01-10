@@ -7,6 +7,12 @@ alias cleanpacman='sudo pacman -Scc'
 alias cleanpacaur='pacaur -Scc'
 alias pacrepo='sudo reflector -l 20 -f 10 --save /etc/pacman.d/mirrorlist'
 #alias pacman='sudo pacman'
+
+alias lsorphanpacman="pacman -Qtdq"
+alias lsorphanpacaur="pacaur -Qtdq"
+alias rmorphanpacman="pacman -Qtdq | pacman -Rns -"
+alias rmorphanpacaur="pacaur -Qtdq | pacaur -Rns -"
+
 alias journalctl='sudo journalctl'
 alias pacu='sudo pacman -Syu --noconfirm'
 #alias auru='yaourt -Syua --noconfirm'
