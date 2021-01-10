@@ -15,6 +15,10 @@ fi
 BROWSER=/usr/bin/chromium
 EDITOR=/usr/bin/vim
 
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
 # from MANJARO
 
 # adding pipenv path after installation

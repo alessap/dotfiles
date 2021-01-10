@@ -7,3 +7,4 @@ ln -sf ~/dotfiles/.bashrc                          ~/.bashrc
 ln -sf ~/dotfiles/.bashrc.aliases                  ~/.bashrc.aliases
 ln -sf ~/dotfiles/.vimrc                           ~/.vimrc
 ln -sf ~/dotfiles/.config/powerline-shell          ~/.config/powerline-shell
+ln -sf ~/dotfiles/.git-completion.bash             ~/.git-completion.bash
