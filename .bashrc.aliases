@@ -8,6 +8,8 @@ alias cleanpacaur='pacaur -Scc'
 alias pacrepo='sudo reflector -l 20 -f 10 --save /etc/pacman.d/mirrorlist'
 #alias pacman='sudo pacman'
 
+alias synctime="sudo ntpd -qg"
+
 alias lsorphanpacman="pacman -Qtdq"
 alias lsorphanpacaur="pacaur -Qtdq"
 alias rmorphanpacman="pacman -Qtdq | pacman -Rns -"
