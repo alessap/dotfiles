@@ -150,3 +150,5 @@ export GTK_MODULES
 export UBUNTU_MENUPROXY
 
 alias adb=~/Android/Sdk/platform-tools/adb
+export PATH=$PATH:/home/alessap/.local/share/gem/ruby/2.7.0/bin
+
