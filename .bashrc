@@ -149,6 +149,11 @@ fi
 export GTK_MODULES
 export UBUNTU_MENUPROXY
 
-alias adb=~/Android/Sdk/platform-tools/adb
+# alias adb=~/Android/Sdk/platform-tools/adb
 export PATH=$PATH:/home/alessap/.local/share/gem/ruby/2.7.0/bin
+
+if [ -d "$HOME/adb-fastboot/platform-tools" ] ; then
+ export PATH="$HOME/adb-fastboot/platform-tools:$PATH"
+fi
+
 
